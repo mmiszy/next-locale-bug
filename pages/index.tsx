@@ -1,8 +1,13 @@
-import { GetStaticPropsContext, GetStaticPropsResult, InferGetStaticPropsType } from "next";
+import {
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+} from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Home({someValueFromTheServer}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home({
+  someValueFromTheServer,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const { locales, pathname, asPath, query } = useRouter();
 
   return (
@@ -25,6 +30,7 @@ export const getStaticProps = (ctx: GetStaticPropsContext) => {
   return {
     props: {
       someValueFromTheServer: ctx.locale || ctx.defaultLocale,
-    }, revalidate: 60,
-  }
-}
+    },
+    revalidate: 60,
+  };
+};
