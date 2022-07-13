@@ -6,10 +6,8 @@ const config = {
     locales: ["pl", "en"],
   },
   experimental: {
-    runtime: "experimental-edge",
     images: { allowFutureImage: true },
   },
-  trailingSlash: true,
 };
 
 module.exports = config;
