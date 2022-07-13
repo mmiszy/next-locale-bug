@@ -9,7 +9,6 @@ const config = {
     runtime: "experimental-edge",
     images: { allowFutureImage: true },
   },
-  trailingSlash: true,
 };
 
 module.exports = config;
