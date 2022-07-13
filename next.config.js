@@ -6,7 +6,7 @@ const config = {
     locales: ["pl", "en"],
   },
   experimental: {
-    images: { allowFutureImage: true },
+    runtime: "experimental-edge",
   },
   trailingSlash: true,
 };
