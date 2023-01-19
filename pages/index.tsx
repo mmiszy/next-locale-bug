@@ -17,7 +17,7 @@ export default function Home({
         {locales?.map((l) => (
           <li key={l}>
             <Link locale={l} href={{ pathname, query }} as={asPath}>
-              <a>{l}</a>
+              {l}
             </Link>
           </li>
         ))}
